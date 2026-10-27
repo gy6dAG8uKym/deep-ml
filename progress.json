@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T14:11:29.988Z",
+  "generated_at": "2026-10-27T16:59:14.243Z",
   "items": {
     "problem:106": {
       "kind": "problem",
@@ -39,6 +39,19 @@
       "last_pushed_at": "2026-10-27T14:11:28.870Z",
       "language": "python",
       "lines": 12
+    },
+    "lab:35": {
+      "kind": "lab",
+      "id": "35",
+      "title": "Design Your Own Tabular Classifier",
+      "difficulty": "medium",
+      "category": "Machine Learning",
+      "url": "https://www.deep-ml.com/labs/35",
+      "path": "labs/0035-design-your-own-tabular-classifier",
+      "first_solved_at": "2026-10-27T16:59:13.024Z",
+      "last_pushed_at": "2026-10-27T16:59:13.024Z",
+      "language": "python",
+      "lines": 90
     }
   }
 }
