@@ -16,17 +16,15 @@ def pca(data: np.ndarray, k: int) -> np.ndarray:
     X=(data-data.mean(axis=0))/data.std(axis=0)
     C=X.T@X/(X.shape[0]-1)
     eigenvalues,eigenvectors=np.linalg.eigh(C)
-    L=list(zip(eigenvalues,eigenvectors.T))
-    L.sort(key=lambda x:x[0],reverse=True)
-    L=[L[i][1] for i in range(k)]
-    L=np.array(L).T
+    idx=np.argsort(eigenvalues)[::-1]
+    components=eigenvectors[:,idx[:k]]
     for j in range(k):
-        for i in range(L.shape[0]):
-            if abs(L[i,j])>1e-10:
-                if L[i,j]<0:
-                    L[:,j]=-L[:,j]
+        for i in range(components.shape[0]):
+            if abs(components[i,j])>1e-10:
+                if components[i,j]<0:
+                    components[:,j]=-components[:,j]
                 break
-    return np.round(L,4)
+    return np.round(components,4)
 
 
     
